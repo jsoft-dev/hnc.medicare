@@ -1,0 +1,52 @@
+<section class="container mx-auto p-6 font-mono">
+  <div class="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
+    <div class="w-full overflow-x-auto">
+      <table class="w-full">
+        <thead>
+          <tr class="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+            <th class="px-4 py-3">First Name</th>
+            <th class="px-4 py-3">Last Name</th>
+            <th class="px-4 py-3">Date of Birth</th>
+            <th class="px-4 py-3">Address</th>
+            <th class="px-4 py-3">Mobile</th>
+            <th class="px-4 py-3">Special Notices</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white">
+          <tr  *ngFor="let patient of patients" class="text-gray-700">
+            <td class="px-4 py-3 border">
+              <div class="flex items-center text-sm">
+                {{patient.first_name}}
+              </div>
+            </td>
+            <td class="px-4 py-3 border">
+              <div class="flex items-center text-sm">
+                {{patient.last_name}}
+              </div>
+            </td>
+            <td class="px-4 py-3 border">
+              <div class="flex items-center text-sm">
+                {{patient.date_of_birth}}
+              </div>
+            </td>
+            <td class="px-4 py-3 border">
+              <div class="flex items-center text-sm">
+                {{patient.address}}
+              </div>
+            </td>
+            <td class="px-4 py-3 border">
+              <div class="flex items-center text-sm">
+                {{patient.mobile}}
+              </div>
+            </td>
+            <td class="px-4 py-3 border">
+              <div class="flex items-center text-sm">
+                {{patient.special_notices}}
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
