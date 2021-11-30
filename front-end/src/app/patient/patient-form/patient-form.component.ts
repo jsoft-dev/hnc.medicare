@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {PatientComponent} from "../patient.component";
 
 @Component({
   selector: 'app-patient-form',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientFormComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('myModal') formModal: any
 
   ngOnInit(): void {
+
   }
 
 }

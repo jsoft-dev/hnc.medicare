@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-sidebar-button ',
-  templateUrl: './sidebar-button.component.html',
-  styleUrls: ['./sidebar-button.component.css']
+  selector: 'add-button ',
+  templateUrl: './add-button.component.html',
+  styleUrls: ['./add-button.component.css']
 })
-export class SidebarButtonComponent implements OnInit {
+export class AddButtonComponent implements OnInit {
 
   constructor() { }
 

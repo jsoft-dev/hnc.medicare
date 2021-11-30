@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fa3bd0a-6491-4880-81ea-00fb89bac752" name="Changes" comment="" />
+    <list default="true" id="8fa3bd0a-6491-4880-81ea-00fb89bac752" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/app/patient/patient-form/patient-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/app/patient/patient-form/patient-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/app/patient/patient-form/patient-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/app/patient/patient-form/patient-form.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/app/patient/patient.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/app/patient/patient.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/app/patient/patient.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/app/patient/patient.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/polyfills.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,7 +122,12 @@
       <updated>1637949444933</updated>
       <workItem from="1637949448166" duration="3241000" />
       <workItem from="1638094045305" duration="3815000" />
-      <workItem from="1638146409933" duration="1512000" />
+      <workItem from="1638146409933" duration="1777000" />
+      <workItem from="1638153447546" duration="10000" />
+      <workItem from="1638236661872" duration="643000" />
+      <workItem from="1638274507047" duration="1608000" />
+      <workItem from="1638285196838" duration="641000" />
+      <workItem from="1638322011114" duration="1235000" />
     </task>
     <task id="LOCAL-00001" summary="Second Build">
       <created>1637951757023</created>
