@@ -5,14 +5,14 @@
       Patients
     </h1>
   </div>
-  <div class="flex justify-end h-10 w-full space-x-2">
-    <add-button (click)="openPatientForm()"></add-button>
-    <edit-button (click)="openPatientForm()"></edit-button>
+  <div class="flex justify-end h-10 w-full space-x-2 items-center">
+    <span>Add new Patient</span>
+    <add-button (click)="addPatient()"></add-button>
   </div>
   <div>
-    <app-patient-table></app-patient-table>
+    <app-patient-table [patients]="patients" (patientEvent)="handlePatientEvent($event)"></app-patient-table>
   </div>
   <div>
-    <app-patient-form></app-patient-form>
+    <app-patient-form [selectedPatient]="selectedPatient"></app-patient-form>
   </div>
 </div>

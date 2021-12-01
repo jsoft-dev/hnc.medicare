@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {PatientComponent} from "../patient.component";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Patient} from "../patient";
 
 @Component({
@@ -7,5 +6,23 @@ import {Patient} from "../patient";
   templateUrl: './patient-table.component.html',
   styleUrls: ['./patient-table.component.css']
 })
-export class PatientTableComponent extends PatientComponent implements OnInit {
+export class PatientTableComponent implements OnInit {
+
+  @Input() patients: Array<Patient> | undefined
+  @Output() patientEvent: EventEmitter<any> = new EventEmitter();
+
+  ngOnInit(): void {
+  }
+
+  selectPatient(patient: Patient) {
+    this.patientEvent.emit({patient: patient, action: 'selectPatient'});
+  }
+
+  editPatient(patient: any) {
+    this.patientEvent.emit({patient: patient, action: 'editPatient'});
+  }
+
+  deletePatient(patient: any) {
+    this.patientEvent.emit({patient: patient, action: 'deletePatient'});
+  }
 }

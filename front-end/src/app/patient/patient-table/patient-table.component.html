@@ -10,38 +10,45 @@
             <th class="px-4 py-3">Address</th>
             <th class="px-4 py-3">Mobile</th>
             <th class="px-4 py-3">Special Notices</th>
+            <th class="px-4 py-3">Options</th>
           </tr>
         </thead>
         <tbody class="bg-white">
-          <tr  *ngFor="let patient of patients" class="text-gray-700">
+          <tr *ngFor="let patient of patients" class="text-gray-700" (click)="selectPatient(patient)">
+              <td class="px-4 py-3 border">
+                <div class="flex items-center text-sm">
+                  {{patient.first_name}}
+                </div>
+              </td>
+              <td class="px-4 py-3 border">
+                <div class="flex items-center text-sm">
+                  {{patient.last_name}}
+                </div>
+              </td>
+              <td class="px-4 py-3 border">
+                <div class="flex items-center text-sm">
+                  {{patient.date_of_birth}}
+                </div>
+              </td>
+              <td class="px-4 py-3 border">
+                <div class="flex items-center text-sm">
+                  {{patient.address}}
+                </div>
+              </td>
+              <td class="px-4 py-3 border">
+                <div class="flex items-center text-sm">
+                  {{patient.mobile}}
+                </div>
+              </td>
+              <td class="px-4 py-3 border">
+                <div class="flex items-center text-sm">
+                  {{patient.special_notices}}
+                </div>
+              </td>
             <td class="px-4 py-3 border">
-              <div class="flex items-center text-sm">
-                {{patient.first_name}}
-              </div>
-            </td>
-            <td class="px-4 py-3 border">
-              <div class="flex items-center text-sm">
-                {{patient.last_name}}
-              </div>
-            </td>
-            <td class="px-4 py-3 border">
-              <div class="flex items-center text-sm">
-                {{patient.date_of_birth}}
-              </div>
-            </td>
-            <td class="px-4 py-3 border">
-              <div class="flex items-center text-sm">
-                {{patient.address}}
-              </div>
-            </td>
-            <td class="px-4 py-3 border">
-              <div class="flex items-center text-sm">
-                {{patient.mobile}}
-              </div>
-            </td>
-            <td class="px-4 py-3 border">
-              <div class="flex items-center text-sm">
-                {{patient.special_notices}}
+              <div class="flex justify-end h-10 w-full space-x-2">
+                <edit-button (click)="editPatient(patient)"></edit-button>
+                <edit-button (click)="deletePatient(patient)"></edit-button>
               </div>
             </td>
           </tr>

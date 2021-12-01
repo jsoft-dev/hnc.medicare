@@ -7,18 +7,17 @@ import javax.persistence.Table;
 
 @Entity(name = "Patients")
 @Table
-public class Patients {
+public class Patient {
 
     @Id
     @Column
-    private Long id;
+    private int id;
 
     @Column
     private String first_name;
 
     @Column
     private String last_name;
-
 
     @Column
     private String date_of_birth;
@@ -32,11 +31,11 @@ public class Patients {
     @Column
     private String special_notices;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
