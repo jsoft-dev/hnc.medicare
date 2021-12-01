@@ -6,5 +6,4 @@ export class Patient {
   address: String | undefined;
   mobile: String | undefined;
   special_notices: String | undefined;
-
 }

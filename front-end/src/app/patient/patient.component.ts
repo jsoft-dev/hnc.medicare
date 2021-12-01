@@ -1,7 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
 import {Patient} from "./patient";
-import {PatientService} from "./patient.service";
 import {ModalManager} from "ngb-modal";
+import {PatientService} from "./patient.service";
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {PatientFormComponent} from "./patient-form/patient-form.component";
 
 @Component({
@@ -13,9 +13,9 @@ export class PatientComponent implements OnInit {
 
   private modalRef: any;
   myModal: any
-  @ViewChild(PatientFormComponent) patientForm: PatientFormComponent | undefined
-  patients: Array<Patient> | undefined;
-  selectedPatient: Patient | undefined;
+  @ViewChild(PatientFormComponent) patientForm: any
+  patients: any;
+  selectedPatient = new Patient();
 
   constructor(private patientService: PatientService, protected modalService: ModalManager) {
   }
@@ -26,16 +26,43 @@ export class PatientComponent implements OnInit {
 
   fetchPatients(): void {
     this.patientService.getPatients().subscribe(
-      (data) => this.patients = data
+      (data: any) => this.patients = data
     )
   }
 
-  openPatientForm(): void {
+  handlePatientEvent(event: any) {
+    if (event.action === 'selectPatient') {
+      this.selectedPatient = event.patient
+
+      return
+    }
+
+    if (event.action === 'editPatient') {
+      this.selectedPatient = event.patient
+      this.openModal()
+    }
+
+    if (event.action === 'deletePatient') {
+      this.selectedPatient = event.patient
+      this.patientService.deletePatient(this.selectedPatient)
+    }
+  }
+
+  getSelectedPatient(patient: Patient) {
+    this.selectedPatient = patient
+  }
+
+  addPatient(): void {
+    this.selectedPatient = new Patient();
+    this.openModal()
+  }
+
+  openModal() {
     this.modalRef = this.modalService.open(this.patientForm?.formModal, {
       size: "lg",
       modalClass: 'mymodal',
       hideCloseButton: false,
-      centered: false,
+      centered: true,
       backdrop: true,
       animation: true,
       keyboard: false,

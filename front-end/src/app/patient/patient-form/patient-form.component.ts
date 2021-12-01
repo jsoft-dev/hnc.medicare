@@ -1,5 +1,6 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {PatientComponent} from "../patient.component";
+import {Patient} from "../patient";
+import {PatientService} from "../patient.service";
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-patient-form',
@@ -8,10 +9,22 @@ import {PatientComponent} from "../patient.component";
 })
 export class PatientFormComponent implements OnInit {
 
-  @ViewChild('myModal') formModal: any
+  @ViewChild('patientFormModal') formModal: any
+  @Input() selectedPatient: any
 
-  ngOnInit(): void {
-
+  constructor(protected patientService: PatientService) {
   }
 
+  ngOnInit(): void {
+  }
+
+  handleSave() {
+    if (!this.selectedPatient?.id) {
+      this.patientService.savePatient(this.selectedPatient)
+
+      return
+    }
+
+    this.patientService.updatePatient(this.selectedPatient)
+  }
 }
