@@ -13,6 +13,6 @@
     <app-patient-table [patients]="patients" (patientEvent)="handlePatientEvent($event)"></app-patient-table>
   </div>
   <div>
-    <app-patient-form [selectedPatient]="selectedPatient"></app-patient-form>
+    <app-patient-form [selectedPatient]="selectedPatient" (patientFormEvent)="closeModal()"></app-patient-form>
   </div>
 </div>

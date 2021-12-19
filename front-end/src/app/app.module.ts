@@ -24,6 +24,8 @@ import {BaseLayoutComponent} from './base-layout/base-layout.component';
 import {FormsModule} from "@angular/forms";
 import {ModalModule} from "ngb-modal";
 import { PatientFormComponent } from './patient/patient-form/patient-form.component';
+import { DoctorFormComponent } from './doctor/doctor-form/doctor-form.component';
+import { DoctorTableComponent } from './doctor/doctor-table/doctor-table.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { PatientFormComponent } from './patient/patient-form/patient-form.compon
     PatientTableComponent,
     BaseLayoutComponent,
     PatientFormComponent,
+    DoctorFormComponent,
+    DoctorTableComponent,
   ],
   imports: [
     BrowserModule,

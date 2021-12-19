@@ -11,9 +11,10 @@ import {PatientFormComponent} from "./patient-form/patient-form.component";
 })
 export class PatientComponent implements OnInit {
 
+  @ViewChild(PatientFormComponent) patientForm: any
+
   private modalRef: any;
   myModal: any
-  @ViewChild(PatientFormComponent) patientForm: any
   patients: any;
   selectedPatient = new Patient();
 
@@ -29,6 +30,9 @@ export class PatientComponent implements OnInit {
       (data: any) => this.patients = data
     )
   }
+
+  savePatient() {}
+  deletePatient() {}
 
   handlePatientEvent(event: any) {
     if (event.action === 'selectPatient') {
@@ -46,10 +50,6 @@ export class PatientComponent implements OnInit {
       this.selectedPatient = event.patient
       this.patientService.deletePatient(this.selectedPatient)
     }
-  }
-
-  getSelectedPatient(patient: Patient) {
-    this.selectedPatient = patient
   }
 
   addPatient(): void {
